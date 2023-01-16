@@ -1,0 +1,63 @@
+{
+    "name": "access-control",
+    "version": "1.0.0",
+    "private": true,
+    "license": "VBC",
+    "scripts": {
+        "start": "ts-node app/index",
+        "dev": "nodemon app/index",
+        "webpack-dev": "webpack --mode=development",
+        "webpack-prod": "webpack --mode=production",
+        "docker-dev": "NODE_ENV=docker_dev docker-compose up",
+        "test": "jest --runInBand --detectOpenHandles",
+        "format:check": "prettier --check .",
+        "format:write": "prettier --write .",
+        "lint:check": "eslint .",
+        "lint:fix": "eslint --fix .",
+        "prepare": "husky install",
+        "changelog-to-html": "changelog-to-html"
+    },
+    "jest": {
+        "preset": "@shelf/jest-mongodb",
+        "testEnvironment": "node",
+        "testTimeout": 20000
+    },
+    "dependencies": {
+        "@babel/core": "^7.20.5",
+        "@babel/polyfill": "^7.12.1",
+        "@babel/preset-env": "^7.20.2",
+        "@babel/register": "^7.18.9",
+        "@commitlint/config-conventional": "^17.3.0",
+        "@hapi/joi": "^17.1.1",
+        "@typescript-eslint/parser": "^5.46.0",
+        "accesscontrol": "^2.2.1",
+        "app-root-path": "^3.1.0",
+        "axios": "^1.2.1",
+        "commitlint": "^17.3.0",
+        "compression": "^1.7.4",
+        "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "eslint": "^8.29.0",
+        "eth-blockchain-helper": "1.0.12",
+        "express": "^4.18.2",
+        "express-rate-limit": "^6.7.0",
+        "express-validator": "^6.14.2",
+        "generate-api-key": "^1.0.2",
+        "helmet": "^6.0.1",
+        "http-errors": "^2.0.0",
+        "husky": "^8.0.2",
+        "joi": "^17.7.0",
+        "joi-objectid": "^4.0.2",
+        "jsonwebtoken": "^9.0.0",
+        "log4js": "^6.7.1",
+        "mongoose": "^6.8.0",
+        "morgan": "^1.10.0",
+        "multer": "^1.4.5-lts.1",
+        "typescript": "^4.9.4",
+        "winston": "^3.8.2"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.46.0"
+    }
+}

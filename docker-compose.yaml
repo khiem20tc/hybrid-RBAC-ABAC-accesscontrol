@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  access-control:
+    container_name: access-control
+    build:
+      context: .
+    ports:
+      - "7983:7983"
+    volumes:
+      - ./.env:/usr/src/app/.env
+    command: node ./dist/app.bundle.js
+    networks:
+      - outer
+    restart: always
+networks:
+    outer:
+      name: access-control
+
+# just config networks for Staging

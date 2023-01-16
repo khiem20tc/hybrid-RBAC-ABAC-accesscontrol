@@ -1,0 +1,14 @@
+node_modules
+logs
+npm-debug.log
+yarn.lock
+yarn-error.lock
+.gitlab-ci.yml
+.gitignore
+.git
+.vscode
+.husky
+api
+test
+containers
+LICENSE

@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "target": "es6",
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "outDir": "dist",
+      "resolveJsonModule": true,
+      "allowJs": true
+    },
+    "lib": ["es2016"],
+    "ts-node": {
+      "files": true
+    },
+    "files": [
+      "app/index.ts",
+      "app/global.d.ts"
+    ]
+  }
